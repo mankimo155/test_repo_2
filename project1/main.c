@@ -15,7 +15,7 @@ int main(void)
 	    for(int i =0 ; i<5 ; i++)
 	    {
 
-	    	_delay_ms(100);
+	    	_delay_ms(250 );
 	    	PORTA <<= 1;
 	    }
 	}

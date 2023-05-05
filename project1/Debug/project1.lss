@@ -1473,8 +1473,8 @@ int main(void)
  b5e:	7e c0       	rjmp	.+252    	; 0xc5c <main+0x126>
  b60:	80 e0       	ldi	r24, 0x00	; 0
  b62:	90 e0       	ldi	r25, 0x00	; 0
- b64:	a8 ec       	ldi	r26, 0xC8	; 200
- b66:	b2 e4       	ldi	r27, 0x42	; 66
+ b64:	aa e7       	ldi	r26, 0x7A	; 122
+ b66:	b3 e4       	ldi	r27, 0x43	; 67
  b68:	8b 87       	std	Y+11, r24	; 0x0b
  b6a:	9c 87       	std	Y+12, r25	; 0x0c
  b6c:	ad 87       	std	Y+13, r26	; 0x0d
@@ -1616,7 +1616,7 @@ _delay_loop_2(uint16_t __count)
  c42:	89 83       	std	Y+1, r24	; 0x01
 	    {
 
-	    	_delay_ms(100);
+	    	_delay_ms(250 );
 	    	PORTA <<= 1;
  c44:	ab e3       	ldi	r26, 0x3B	; 59
  c46:	b0 e0       	ldi	r27, 0x00	; 0
