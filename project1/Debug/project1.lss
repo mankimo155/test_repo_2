@@ -1455,15 +1455,15 @@ int main(void)
  b44:	de bf       	out	0x3e, r29	; 62
  b46:	0f be       	out	0x3f, r0	; 63
  b48:	cd bf       	out	0x3d, r28	; 61
-	DDRA= 0b00011111 ;
- b4a:	ea e3       	ldi	r30, 0x3A	; 58
+	DDRB= 0b00011111 ;
+ b4a:	e7 e3       	ldi	r30, 0x37	; 55
  b4c:	f0 e0       	ldi	r31, 0x00	; 0
  b4e:	8f e1       	ldi	r24, 0x1F	; 31
  b50:	80 83       	st	Z, r24
 	while(1)
 	{
-		PORTA = 0b00000001 ;
- b52:	eb e3       	ldi	r30, 0x3B	; 59
+		PORTB = 0b00000001 ;
+ b52:	e8 e3       	ldi	r30, 0x38	; 56
  b54:	f0 e0       	ldi	r31, 0x00	; 0
  b56:	81 e0       	ldi	r24, 0x01	; 1
  b58:	80 83       	st	Z, r24
@@ -1617,19 +1617,19 @@ _delay_loop_2(uint16_t __count)
 	    {
 
 	    	_delay_ms(250 );
-	    	PORTA <<= 1;
- c44:	ab e3       	ldi	r26, 0x3B	; 59
+	    	PORTB <<= 1;
+ c44:	a8 e3       	ldi	r26, 0x38	; 56
  c46:	b0 e0       	ldi	r27, 0x00	; 0
- c48:	eb e3       	ldi	r30, 0x3B	; 59
+ c48:	e8 e3       	ldi	r30, 0x38	; 56
  c4a:	f0 e0       	ldi	r31, 0x00	; 0
  c4c:	80 81       	ld	r24, Z
  c4e:	88 0f       	add	r24, r24
  c50:	8c 93       	st	X, r24
 {
-	DDRA= 0b00011111 ;
+	DDRB= 0b00011111 ;
 	while(1)
 	{
-		PORTA = 0b00000001 ;
+		PORTB = 0b00000001 ;
 	    for(int i =0 ; i<5 ; i++)
  c52:	8f 85       	ldd	r24, Y+15	; 0x0f
  c54:	98 89       	ldd	r25, Y+16	; 0x10

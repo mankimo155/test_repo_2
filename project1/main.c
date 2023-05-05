@@ -8,15 +8,15 @@
 #include<util/delay.h>
 int main(void)
 {
-	DDRA= 0b00011111 ;
+	DDRB= 0b00011111 ;
 	while(1)
 	{
-		PORTA = 0b00000001 ;
+		PORTB = 0b00000001 ;
 	    for(int i =0 ; i<5 ; i++)
 	    {
 
 	    	_delay_ms(250 );
-	    	PORTA <<= 1;
+	    	PORTB <<= 1;
 	    }
 	}
 }
